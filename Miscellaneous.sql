@@ -1,4 +1,5 @@
 -- Make Hearthstone No Cooldown
+-- Â¯Ê¯ÎÞCD
 -- steps:
 -- 1.execute sql script
 -- 2.clean client cache
