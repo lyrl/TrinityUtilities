@@ -6,7 +6,7 @@ Bugs and contact with E-mail: Rochet2@post.com
 汉化:lyrl
 邮箱:lyrl@me.com
 添加传送员:
-			脚本执行完后进入游戏输入 .npc add 190000
+脚本执行完后进入游戏输入 .npc add 190000
 */
 
 SET
@@ -37,7 +37,7 @@ DELETE from gameobject WHERE ID = @RUNE AND guid >= 200000;
 -- Teleporter
 
 INSERT INTO creature_template (entry, modelid1, name, subname, IconName, gossip_menu_id, minlevel, maxlevel, faction, npcflag, speed_walk, speed_run, scale, rank, unit_class, unit_flags, type, type_flags, InhabitType, RegenHealth, flags_extra, AiName) VALUES
-(@ENTRY, @MODEL, @NAME, @SUBNAME, "Directions", @GOSSIP_MENU, 71, 71, 35, 3, 1, 1.14286, 1.25, 1, 1, 2, 7, 138936390, 3, 1, 2, "SmartAI");
+(@ENTRY, @MODEL, @NAME, @SUBNAME, "向导", @GOSSIP_MENU, 71, 71, 35, 3, 1, 1.14286, 1.25, 1, 1, 2, 7, 138936390, 3, 1, 2, "SmartAI");
 
 -- Teleporter aura
 
@@ -60,11 +60,11 @@ INSERT INTO gossip_menu (entry, text_id) VALUES
 -- Gossip header texts
 
 INSERT INTO npc_text (ID, text0_0, em0_1) VALUES
-(@TEXT_ID+4, "$BWhere would you like to be ported?$B", 0),
+(@TEXT_ID+4, "$B你想去哪里?$B", 0),
 (@TEXT_ID+3, "$BBe careful with choosing raids, I won't be there if you wipe.$B", 0),
-(@TEXT_ID+2, "$BUp for some dungeon exploring?$B", 0),
-(@TEXT_ID+1, "$B For The Alliance!$B", 6),
-(@TEXT_ID,  "$B For the Horde!$B", 6);
+(@TEXT_ID+2, "$B准备好冒险了吗?$B", 0),
+(@TEXT_ID+1, "$B为了联盟!$B", 6),
+(@TEXT_ID,  "$B为了部落!$B", 6);
 
 -- Conditions for gossip option and menu factions
 
